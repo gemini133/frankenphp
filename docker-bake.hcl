@@ -126,7 +126,6 @@ target "static-builder-musl" {
     context = "./"
     platforms = [
         "linux/amd64",
-        "linux/arm64",
     ]
     tags = distinct(flatten([
         LATEST ? "${IMAGE_NAME}:static-builder-musl" : "",
