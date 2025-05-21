@@ -7,7 +7,7 @@ variable "VERSION" {
 }
 
 variable "PHP_VERSION" {
-    default = "8.2,8.3,8.4"
+    default = "8.4"
 }
 
 variable "GO_VERSION" {
@@ -148,8 +148,7 @@ target "static-builder-gnu" {
     dockerfile = "static-builder-gnu.Dockerfile"
     context = "./"
     platforms = [
-        "linux/amd64",
-        "linux/arm64"
+        "linux/amd64"
     ]
     tags = distinct(flatten([
         LATEST ? "${IMAGE_NAME}:static-builder-gnu" : "",
