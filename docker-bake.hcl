@@ -76,7 +76,7 @@ function "_php_version" {
 target "default" {
     name = "${tgt}-php-${replace(php-version, ".", "-")}-${os}"
     matrix = {
-        os = ["bookworm", "alpine"]
+        os = ["bookworm"]
         php-version = split(",", PHP_VERSION)
         tgt = ["builder", "runner"]
     }
@@ -88,18 +88,8 @@ target "default" {
     context = "./"
     target = tgt
     # arm/v6 is only available for Alpine: https://github.com/docker-library/golang/issues/502
-    platforms = os == "alpine" ? [
-        "linux/amd64",
-        "linux/386",
-        # FIXME: armv6 doesn't build in GitHub actions because we use a custom Go build
-        #"linux/arm/v6",
-        "linux/arm/v7",
-        "linux/arm64",
-    ] : [
-        "linux/amd64",
-        "linux/386",
-        "linux/arm/v7",
-        "linux/arm64"
+    platforms = [
+        "linux/amd64"
     ]
     tags = distinct(flatten(
         [for pv in php_version(php-version) : flatten([
