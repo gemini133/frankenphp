@@ -74,7 +74,7 @@ if [ -z "${PHP_VERSION}" ]; then
 fi
 # default extension set
 # defaultExtensions="apcu,bcmath,bz2,calendar,ctype,curl,dba,dom,exif,fileinfo,filter,ftp,gd,gmp,gettext,iconv,igbinary,imagick,intl,ldap,mbregex,mbstring,mysqli,mysqlnd,opcache,openssl,parallel,pcntl,pdo,pdo_mysql,pdo_pgsql,pdo_sqlite,pgsql,phar,posix,protobuf,readline,redis,session,shmop,simplexml,soap,sockets,sodium,sqlite3,ssh2,sysvmsg,sysvsem,sysvshm,tidy,tokenizer,xlswriter,xml,xmlreader,xmlwriter,zip,zlib,yaml,zstd"
-defaultExtensions="bcmath,calendar,ctype,curl,dom,exif,ffi,fileinfo,filter,gd,iconv,intl,mbregex,mbstring,mysqli,mysqlnd,opcache,openssl,pcntl,pdo,pdo_mysql,posix,readline,redis,session,simplexml,sockets,sodium,tokenizer,xml,xmlreader,xmlwriter,xsl,zip,zlib"
+defaultExtensions="bcmath,calendar,ctype,curl,dom,exif,fileinfo,filter,gd,iconv,intl,mbregex,mbstring,mysqli,mysqlnd,opcache,openssl,pcntl,pdo,pdo_mysql,posix,readline,redis,session,simplexml,sockets,sodium,tokenizer,xml,xmlreader,xmlwriter,xsl,zip,zlib"
 
 # if [ "${os}" != "linux" ] || [ "${SPC_LIBC}" = "glibc" ]; then
 # 	defaultExtensions="${defaultExtensions},ffi"
