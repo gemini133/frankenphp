@@ -83,7 +83,7 @@ jobs:
           set: |
             ${{ (github.event_name == 'pull_request' || matrix.platform == 'linux/arm64') && 'static-builder-gnu.args.NO_COMPRESS=1' || '' }}
             static-builder-gnu.args.BUILD_PACKAGES=1
-            static-builder-gnu.args.PHP_EXTENSIONS=mongodb,bcmath,calendar,ctype,curl,dom,exif,ffi,fileinfo,filter,gd,iconv,intl,mbregex,mbstring,mysqli,mysqlnd,opcache,openssl,pcntl,pdo,pdo_mysql,posix,readline,redis,session,simplexml,sockets,sodium,tokenizer,xml,xmlreader,xmlwriter,xsl,zip,zlib
+            static-builder-gnu.args.PHP_EXTENSIONS=bcmath,calendar,ctype,curl,dom,exif,ffi,fileinfo,filter,gd,iconv,intl,mbregex,mbstring,mysqli,mysqlnd,opcache,openssl,pcntl,pdo,pdo_mysql,posix,readline,redis,session,simplexml,sockets,sodium,tokenizer,xml,xmlreader,xmlwriter,xsl,zip,zlib
             *.tags=
             *.platform=${{ matrix.platform }}
             *.cache-from=type=gha,scope=${{ needs.prepare.outputs.ref || github.ref }}-static-builder-gnu
