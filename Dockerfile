@@ -76,6 +76,9 @@ RUN apt-get update && \
 	libssl-dev \
 	libxml2-dev \
 	zlib1g-dev \
+        libicu-dev \
+	libsasl2-dev \
+        libzstd-dev \
 	&& \
 	apt-get clean
 
