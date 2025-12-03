@@ -72,12 +72,12 @@ if [ -z "${PHP_VERSION}" ]; then
 		fi
 	}
 
-	PHP_VERSION="$(get_latest_php_version "8.4")"
+	PHP_VERSION="$(get_latest_php_version "8.5")"
 	export PHP_VERSION
 fi
 # default extension set
-defaultExtensions="amqp,apcu,ast,bcmath,brotli,bz2,calendar,ctype,curl,dba,dom,exif,fileinfo,filter,ftp,gd,gmp,gettext,iconv,igbinary,imagick,intl,ldap,lz4,mbregex,mbstring,memcache,memcached,mysqli,mysqlnd,opcache,openssl,password-argon2,parallel,pcntl,pdo,pdo_mysql,pdo_pgsql,pdo_sqlite,pdo_sqlsrv,pgsql,phar,posix,protobuf,readline,redis,session,shmop,simplexml,soap,sockets,sodium,sqlite3,ssh2,sysvmsg,sysvsem,sysvshm,tidy,tokenizer,xlswriter,xml,xmlreader,xmlwriter,xsl,xz,zip,zlib,yaml,zstd"
-defaultExtensionLibs="libavif,nghttp2,nghttp3,ngtcp2,watcher"
+defaultExtensions="bcmath,calendar,ctype,curl,dom,exif,fileinfo,filter,gd,iconv,intl,mbregex,mbstring,mongodb,mysqli,mysqlnd,opcache,openssl,pcntl,pdo,pdo_mysql,pdo_sqlite,phar,posix,readline,redis,session,simplexml,sockets,sodium,sqlite3,tokenizer,xml,xmlreader,xmlwriter,xsl,zip,zlib"
+defaultExtensionLibs="nghttp2,nghttp3,ngtcp2"
 
 if [ -z "${FRANKENPHP_VERSION}" ]; then
 	FRANKENPHP_VERSION="$(git rev-parse --verify HEAD)"
