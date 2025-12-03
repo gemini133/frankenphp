@@ -77,7 +77,7 @@ if [ -z "${PHP_VERSION}" ]; then
 	export PHP_VERSION
 fi
 # default extension set
-defaultExtensions="bcmath,calendar,ctype,curl,dom,exif,fileinfo,filter,gd,iconv,intl,mbregex,mbstring,mongodb,mysqli,mysqlnd,opcache,openssl,pcntl,pdo,pdo_mysql,pdo_sqlite,phar,posix,readline,redis,session,simplexml,sockets,sodium,sqlite3,tokenizer,xml,xmlreader,xmlwriter,xsl,zip,zlib"
+defaultExtensions="bcmath,calendar,ctype,curl,dom,exif,fileinfo,filter,gd,iconv,intl,mbregex,mbstring,mongodb,mysqli,opcache,openssl,pcntl,pdo,pdo_mysql,pdo_sqlite,phar,posix,readline,redis,session,simplexml,sockets,sodium,sqlite3,tokenizer,xml,xmlreader,xmlwriter,zip,zlib"
 defaultExtensionLibs="nghttp2,nghttp3,ngtcp2"
 
 if [ -z "${FRANKENPHP_VERSION}" ]; then
