@@ -31,6 +31,7 @@ os="$(uname -s | tr '[:upper:]' '[:lower:]')"
 # - SPC_LIBC: Set to glibc to build with GNU toolchain (default: musl)
 
 # init spc command, if we use spc binary, just use it instead of fetching source
+SPC_OPT_DOWNLOAD_ARGS="--prefer-pre-built"
 if [ -z "${SPC_REL_TYPE}" ]; then
 	SPC_REL_TYPE="source"
 fi
